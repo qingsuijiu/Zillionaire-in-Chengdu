@@ -1,0 +1,11 @@
+源.cpp是main函数所在文件；
+people文件描述的是人物类，以person为基础类别，special_man继承person并附带技能系统，fartman、hacker、shirtman、cutebaby继承special_man作为具体的带有技能的特殊类，
+之后还打算做更多特殊人物（通过继承special_man），并加入计算机控制的电脑玩家（初步设计不带技能，通过继承person类写一个robot类）；
+dfw文件是该游戏的主体实现类，其函数dfw_main是改游戏的主体框架；
+caption文件是将EasyX中的文字输出函数进一步包装，使其使用更契合该小游戏；
+dfwmap文件负责管理该游戏的地图资源；
+site文件写了一个具体地点所需要包含的各要素，是dfwmap系统的核心组成部分；
+dice类是实现骰子功能；
+destiny则是实现命运、机会系统；
+setting写的是游戏刚开始的设置界面。
+
