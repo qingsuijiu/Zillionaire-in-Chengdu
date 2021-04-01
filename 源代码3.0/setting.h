@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 
 #include<vector>
 #include<string>
-#include <graphics.h>		// ÒıÓÃÍ¼ĞÎ¿âÍ·ÎÄ¼ş
+#include <graphics.h>		// å¼•ç”¨å›¾å½¢åº“å¤´æ–‡ä»¶
 #include <conio.h>
 #include<iostream>
 #include<fstream>

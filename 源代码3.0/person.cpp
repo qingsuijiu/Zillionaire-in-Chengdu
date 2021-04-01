@@ -1,9 +1,9 @@
-#include "person.h"
+ï»¿#include "person.h"
 
 bool person::go_steps(int i)
 {
 	int new_location = (location + i + 30) % 30;
-	//µ±ÈËÎïÊÇÔÚÇ°½ø ²¢ÇÒ ÆäĞÂÎ»ÖÃ±êºÅĞ¡ÓÚ¾ÉÎ»ÖÃ£¬¿ÉÈÏÎªÆä¹ıÁËÆğµã
+	//å½“äººç‰©æ˜¯åœ¨å‰è¿› å¹¶ä¸” å…¶æ–°ä½ç½®æ ‡å·å°äºæ—§ä½ç½®ï¼Œå¯è®¤ä¸ºå…¶è¿‡äº†èµ·ç‚¹
 	if (i > 0 && new_location < location)
 	{
 		location = new_location;
@@ -22,7 +22,7 @@ bool fartman::fart_push()
 		return false;
 
 	string temp = this->get_name();
-	temp += "ÊÇ·ñÊ¹ÓÃ¼¼ÄÜ¡°³ôÆ¨ÍÆ½ø¡±£¨y/n£©";
+	temp += "æ˜¯å¦ä½¿ç”¨æŠ€èƒ½â€œè‡­å±æ¨è¿›â€ï¼ˆy/nï¼‰";
 	caption_write_r(temp);
 
 	while (1)
@@ -33,7 +33,7 @@ bool fartman::fart_push()
 		{
 			//refresh_background();
 			string temp2 = this->get_name();
-			temp2 += "¡°àÛ¡ª¡ª¡ª¡ª¡±·ÅÁË¸ö¾ªÌì´óÆ¨£¬·´³åÁ¦ÈÃËı¶îÍâÏòÇ°Ò»¸ñ£¡²»À¢ÊÇfyµÄÅ®ÈË£¡";
+			temp2 += "â€œå™—â€”â€”â€”â€”â€æ”¾äº†ä¸ªæƒŠå¤©å¤§å±ï¼Œåå†²åŠ›è®©å¥¹é¢å¤–å‘å‰ä¸€æ ¼ï¼ä¸æ„§æ˜¯fyçš„å¥³äººï¼";
 			caption_write_r(temp2);
 			this->set_skill(false);
 			return true;
@@ -41,13 +41,13 @@ bool fartman::fart_push()
 		else if (c == 'n')
 		{
 			string temp2 = this->get_name();
-			temp2 += "·ÅÆúÊ¹ÓÃ¼¼ÄÜ¡°³ôÆ¨ÍÆ½ø¡±";
+			temp2 += "æ”¾å¼ƒä½¿ç”¨æŠ€èƒ½â€œè‡­å±æ¨è¿›â€";
 			caption_write_r(temp2);
 			return false;
 		}
-		else//Òì³£ÊäÈëµÄ´¦Àí
+		else//å¼‚å¸¸è¾“å…¥çš„å¤„ç†
 		{
-			//caption_write(1, "ÊäÈë´íÎó£¬ÇëÊäÈëy/n");
+			//caption_write(1, "è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥y/n");
 		}
 	}
 }
@@ -70,7 +70,7 @@ int hacker::attack_bank()
 		return false;
 
 	string temp = this->get_name();
-	temp += "ÊÇ·ñÊ¹ÓÃ¼¼ÄÜ¡°ºÚÈëÒøĞĞ¡±£¨0:·ÅÆú 1:ºÚ500Ôª(³É¹¦ÂÊ80%£¬Ê§°ÜÈëÓü) 2:ºÚ1000Ôª£¨40%£© 3:ºÚ1500Ôª£¨26%£©£©";
+	temp += "æ˜¯å¦ä½¿ç”¨æŠ€èƒ½â€œé»‘å…¥é“¶è¡Œâ€ï¼ˆ0:æ”¾å¼ƒ 1:é»‘500å…ƒ(æˆåŠŸç‡80%ï¼Œå¤±è´¥å…¥ç‹±) 2:é»‘1000å…ƒï¼ˆ40%ï¼‰ 3:é»‘1500å…ƒï¼ˆ26%ï¼‰ï¼‰";
 	caption_write_r(temp);
 
 	while (1)
@@ -80,7 +80,7 @@ int hacker::attack_bank()
 		if (c == '0')
 		{
 			string temp2 = this->get_name();
-			temp2 += "·ÅÆúÊ¹ÓÃ¼¼ÄÜ¡°ºÚÈëÒøĞĞ¡±";
+			temp2 += "æ”¾å¼ƒä½¿ç”¨æŠ€èƒ½â€œé»‘å…¥é“¶è¡Œâ€";
 			caption_write_r(temp2);
 			return false;
 		}
@@ -92,14 +92,14 @@ int hacker::attack_bank()
 			if (u(e) <= 80)
 			{
 				this->set_money(500);
-				temp2 += "³É¹¦ºÚÈëÒøĞĞ£¬µÁ×ß500Ôª";
+				temp2 += "æˆåŠŸé»‘å…¥é“¶è¡Œï¼Œç›—èµ°500å…ƒ";
 				caption_write_r(temp2);
 				this->set_skill(false);
 				return 1;
 			}
 			else
 			{
-				temp2 += "¹¥»÷Ê§°Ü£¬±»×¥ÈëÓü";
+				temp2 += "æ”»å‡»å¤±è´¥ï¼Œè¢«æŠ“å…¥ç‹±";
 				caption_write_r(temp2);
 				this->set_skill(false);
 				return 2;
@@ -113,14 +113,14 @@ int hacker::attack_bank()
 			if (u(e) <= 40)
 			{
 				this->set_money(1000);
-				temp2 += "³É¹¦ºÚÈëÒøĞĞ£¬µÁ×ß1000Ôª";
+				temp2 += "æˆåŠŸé»‘å…¥é“¶è¡Œï¼Œç›—èµ°1000å…ƒ";
 				caption_write_r(temp2);
 				this->set_skill(false);
 				return 1;
 			}
 			else
 			{
-				temp2 += "¹¥»÷Ê§°Ü£¬±»×¥ÈëÓü";
+				temp2 += "æ”»å‡»å¤±è´¥ï¼Œè¢«æŠ“å…¥ç‹±";
 				caption_write_r(temp2);
 				this->set_skill(false);
 				return 2;
@@ -135,22 +135,22 @@ int hacker::attack_bank()
 			if (u(e) <= 26)
 			{
 				this->set_money(1500);
-				temp2 += "³É¹¦ºÚÈëÒøĞĞ£¬µÁ×ß1500Ôª";
+				temp2 += "æˆåŠŸé»‘å…¥é“¶è¡Œï¼Œç›—èµ°1500å…ƒ";
 				caption_write_r(temp2);
 				this->set_skill(false);
 				return 1;
 			}
 			else
 			{
-				temp2 += "¹¥»÷Ê§°Ü£¬±»×¥ÈëÓü";
+				temp2 += "æ”»å‡»å¤±è´¥ï¼Œè¢«æŠ“å…¥ç‹±";
 				caption_write_r(temp2);
 				this->set_skill(false);
 				return 2;
 			}
 		}
-		else//Òì³£ÊäÈëµÄ´¦Àí
+		else//å¼‚å¸¸è¾“å…¥çš„å¤„ç†
 		{
-			//caption_write(1, "ÊäÈë´íÎó£¬ÇëÊäÈëy/n");
+			//caption_write(1, "è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥y/n");
 		}
 	}
 }
@@ -171,7 +171,7 @@ bool shirtman::throw_shirt()
 		return false;
 
 	string temp = this->get_name();
-	temp += "ÊÇ·ñÊ¹ÓÃ¼¼ÄÜ¡°ÂÒÈÓ´ó±ã¡±£¨y/n£©£©";
+	temp += "æ˜¯å¦ä½¿ç”¨æŠ€èƒ½â€œä¹±æ‰”å¤§ä¾¿â€ï¼ˆy/nï¼‰ï¼‰";
 	caption_write_r(temp);
 
 	while (1)
@@ -181,7 +181,7 @@ bool shirtman::throw_shirt()
 		if (c == 'y')
 		{
 			string temp2 = this->get_name();
-			temp2 += "¡°bia¡ª¡ª¡ª¡ª¡±ÔÚµØÉÏÂÒÀ­ÁËÒ»Ûç±ã±ã£¬²¢ÔÚÉÏÃæ¸ÇÁËĞ©¸É²İÈÃ±ã±ã²»Ò×±»·¢ÏÖ£¬»µ»µµØĞ¦ÁËĞ¦£¬ÅÜÁË";
+			temp2 += "â€œbiaâ€”â€”â€”â€”â€åœ¨åœ°ä¸Šä¹±æ‹‰äº†ä¸€å¨ä¾¿ä¾¿ï¼Œå¹¶åœ¨ä¸Šé¢ç›–äº†äº›å¹²è‰è®©ä¾¿ä¾¿ä¸æ˜“è¢«å‘ç°ï¼Œåååœ°ç¬‘äº†ç¬‘ï¼Œè·‘äº†";
 			caption_write_r(temp2);
 			this->set_skill(false);
 			_getch();
@@ -190,14 +190,14 @@ bool shirtman::throw_shirt()
 		else if (c == 'n')
 		{
 			string temp2 = this->get_name();
-			temp2 += "·ÅÆúÊ¹ÓÃ¼¼ÄÜ¡°ÂÒÈÓ´ó±ã¡±";
+			temp2 += "æ”¾å¼ƒä½¿ç”¨æŠ€èƒ½â€œä¹±æ‰”å¤§ä¾¿â€";
 			caption_write_r(temp2);
 			_getch();
 			return 0;
 		}
-		else//Òì³£ÊäÈëµÄ´¦Àí
+		else//å¼‚å¸¸è¾“å…¥çš„å¤„ç†
 		{
-			//caption_write(1, "ÊäÈë´íÎó£¬ÇëÊäÈëy/n");
+			//caption_write(1, "è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥y/n");
 		}
 	}
 }
@@ -213,9 +213,9 @@ int shirtman::all_land_operations()
 
 bool cutebaby::act_cute()
 {
-	string temp = "Á½Î»ÒøĞĞ×Ü¹Ü¿´µ½Â·¹ıÆğµãµÄ";
+	string temp = "ä¸¤ä½é“¶è¡Œæ€»ç®¡çœ‹åˆ°è·¯è¿‡èµ·ç‚¹çš„";
 	temp += this->get_name();
-	temp += ",±»ÃÈ»¯ÁË£¡ÏëÈÃÄãÁôÏÂÀ´ÅãËûÃÇÍæÒ»¸ö»ØºÏ£¬ÊÇ·ñÔ¸Òâ£¨y/n£©";
+	temp += ",è¢«èŒåŒ–äº†ï¼æƒ³è®©ä½ ç•™ä¸‹æ¥é™ªä»–ä»¬ç©ä¸€ä¸ªå›åˆï¼Œæ˜¯å¦æ„¿æ„ï¼ˆy/nï¼‰";
 	caption_write_r(temp);
 	while (1)
 	{
@@ -224,7 +224,7 @@ bool cutebaby::act_cute()
 		if (c == 'y')
 		{
 			string temp2 = this->get_name();
-			temp2 += "¾ö¶¨ÁôÏÂ£¬Á½Î»ÒøĞĞ×Ü¹Ü¿ªĞÄµØ¸øÁËËı600Ôªºì°ü!²»¹ıÏÂ»ØºÏËı¾Í²»ÄÜ¼ÌĞøÂÃĞĞÁË¡£";
+			temp2 += "å†³å®šç•™ä¸‹ï¼Œä¸¤ä½é“¶è¡Œæ€»ç®¡å¼€å¿ƒåœ°ç»™äº†å¥¹600å…ƒçº¢åŒ…!ä¸è¿‡ä¸‹å›åˆå¥¹å°±ä¸èƒ½ç»§ç»­æ—…è¡Œäº†ã€‚";
 			caption_write_r(temp2);
 			this->set_money(+600);
 			this->set_pause(true);
@@ -234,15 +234,15 @@ bool cutebaby::act_cute()
 		else if (c == 'n')
 		{
 			string temp2 = this->get_name();
-			temp2 += "¾Ü¾øÁË¹Ö°¢ÒÌË§ÊåÊå£¬Ëı½ñÍí¾ÍÒªÔ¶º½£¬Ë§ÊåÊå¸øÁËËı100ÔªÁãÊ³·Ñ";
+			temp2 += "æ‹’ç»äº†æ€ªé˜¿å§¨å¸…å”å”ï¼Œå¥¹ä»Šæ™šå°±è¦è¿œèˆªï¼Œå¸…å”å”ç»™äº†å¥¹100å…ƒé›¶é£Ÿè´¹";
 			caption_write_r(temp2);
 			this->set_money(100);
 			_getch();
 			return 0;
 		}
-		else//Òì³£ÊäÈëµÄ´¦Àí
+		else//å¼‚å¸¸è¾“å…¥çš„å¤„ç†
 		{
-			//caption_write(1, "ÊäÈë´íÎó£¬ÇëÊäÈëy/n");
+			//caption_write(1, "è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥y/n");
 		}
 	}
 }
@@ -258,9 +258,9 @@ string cutebaby::reach_starting()
 string blindBoxGirl::reach_starting()
 {
 	int id = take_blind_box();
-	string temp = "¹§Ï²£¬Äã¿ª³öÁË¼ÛÖµ";
+	string temp = "æ­å–œï¼Œä½ å¼€å‡ºäº†ä»·å€¼";
 	temp += to_string(100 + id * 100);
-	temp += "ÔªµÄ";
+	temp += "å…ƒçš„";
 	temp += names[id];
 	temp += "!";
 	return temp;

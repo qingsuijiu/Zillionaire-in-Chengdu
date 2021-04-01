@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include<vector>
 #include<utility>
 #include<memory>
@@ -61,8 +61,8 @@ private:
 	int id;
 	int status;  
 	bool is_shirt;
-	//-1��ʾ��˰��-2��ʾ���ᣬ-3��ʾ���ˣ�-4��ʾ���ͣ����/·��������-5��ʾ����
-	//0��ʾδ���ۣ�1��ʾ�ѳ��ۣ�2��ʾ������������,3��ʾ���˱��ݣ�4��ʾ�������¾Ƶ�
+	//-1表示交税，-2表示机会，-3表示命运，-4表示免费停车场/路过监狱，-5表示入牢
+	//0表示未出售，1表示已出售，2表示建了青年旅社,3表示建了宾馆，4表示建了情侣酒店
 	shared_ptr<person> owner;
 
 	static vector<int> xs;

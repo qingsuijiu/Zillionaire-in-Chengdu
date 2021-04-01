@@ -1,8 +1,8 @@
-#include "caption.h"
+ï»¿#include "caption.h"
 
 void caption_write(int kind, string text)
 {
-	//½«string×ª»»Îªouttextxy¿ÉÒÔ½ÓÊÜµÄ¸ñÊ½
+	//å°†stringè½¬æ¢ä¸ºouttextxyå¯ä»¥æ¥å—çš„æ ¼å¼
 	//string-->char[ ]-->LPCTSTR
 	char s[100];
 	int i;
@@ -13,12 +13,12 @@ void caption_write(int kind, string text)
 	wchar_t* wide = new wchar_t[n];
 	MultiByteToWideChar(0, 0, s, -1, wide, n);
 
-	//ÉèÖÃÍ³Ò»µÄ×ÖÌå¸ñÊ½
+	//è®¾ç½®ç»Ÿä¸€çš„å­—ä½“æ ¼å¼
 	settextstyle(25, 0, _T("Consolas"));
 	settextcolor(0x000000);
 	setbkmode(TRANSPARENT);
 
-	//Ñ¡ÔñÊä³öÎ»ÖÃ£¬Êä³öÄÚÈİ
+	//é€‰æ‹©è¾“å‡ºä½ç½®ï¼Œè¾“å‡ºå†…å®¹
 	switch (kind)
 	{
 	case 1:
@@ -43,7 +43,7 @@ void caption_write(int kind, string text)
 
 void caption_write_money_show(string text)
 {
-	//ÉèÖÃÍ³Ò»µÄ×ÖÌå¸ñÊ½
+	//è®¾ç½®ç»Ÿä¸€çš„å­—ä½“æ ¼å¼
 	settextstyle(25, 0, _T("Consolas"));
 	settextcolor(0x000000);
 	setbkmode(TRANSPARENT);
@@ -67,7 +67,7 @@ void caption_write_r(string text)
 	loadimage(&blank, _T("blank.png"));
 	putimage(1225, 335, &blank);
 
-	//ÉèÖÃÍ³Ò»µÄ×ÖÌå¸ñÊ½
+	//è®¾ç½®ç»Ÿä¸€çš„å­—ä½“æ ¼å¼
 	settextstyle(25, 0, _T("Consolas"));
 	settextcolor(0x000000);
 	setbkmode(TRANSPARENT);
@@ -104,7 +104,7 @@ void caption_write_r(string text)
 
 void setting_caption_round(string text)
 {
-	//ÉèÖÃÍ³Ò»µÄ×ÖÌå¸ñÊ½
+	//è®¾ç½®ç»Ÿä¸€çš„å­—ä½“æ ¼å¼
 	settextstyle(25, 0, _T("Consolas"));
 	settextcolor(0x000000);
 	setbkmode(TRANSPARENT);
@@ -133,7 +133,7 @@ void setting_caption_name(string text, int x)
 	wchar_t* wide = new wchar_t[n];
 	MultiByteToWideChar(0, 0, s, -1, wide, n);
 
-	//ÉèÖÃÍ³Ò»µÄ×ÖÌå¸ñÊ½
+	//è®¾ç½®ç»Ÿä¸€çš„å­—ä½“æ ¼å¼
 	settextstyle(15, 0, _T("Consolas"));
 	settextcolor(0x000000);
 	setbkmode(TRANSPARENT);

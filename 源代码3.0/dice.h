@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include<graphics.h>
 #include<conio.h>
 #include<map>
@@ -17,7 +17,7 @@ public:
 		else if (i >= 1 && i <= 6)
 			return &point[i];
 		else
-			return nullptr;  //¿ÉÑ¡ÔñÅ×Òì³£
+			return nullptr;  //å¯é€‰æ‹©æŠ›å¼‚å¸¸
 	}
 	pair<size_t, size_t> get_xy(bool is_t)
 	{

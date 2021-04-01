@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 #include<string>
 #include<memory>
-#include <graphics.h>		// ÒıÓÃÍ¼ĞÎ¿âÍ·ÎÄ¼ş
-#include <graphics.h>		// ÒıÓÃÍ¼ĞÎ¿âÍ·ÎÄ¼ş
+#include <graphics.h>		// å¼•ç”¨å›¾å½¢åº“å¤´æ–‡ä»¶
+#include <graphics.h>		// å¼•ç”¨å›¾å½¢åº“å¤´æ–‡ä»¶
 #include <conio.h>
 #include<stdlib.h>
 #include<random>
@@ -93,10 +93,10 @@ public:
 		set_money(1000);
 		return "";
 	}
-	virtual int self_land_operations() { return 0; }  //0±íÊ¾ÎŞĞè¶îÍâ²Ù×÷£¬1±íÊ¾ÈëÓü,2±íÊ¾ÓĞÕÏ°­Îï
+	virtual int self_land_operations() { return 0; }  //0è¡¨ç¤ºæ— éœ€é¢å¤–æ“ä½œï¼Œ1è¡¨ç¤ºå…¥ç‹±,2è¡¨ç¤ºæœ‰éšœç¢ç‰©
 	virtual int all_land_operations() { return 0; }
 	/*
-	//×¨ÎªÄÚ²âÌá¹©
+	//ä¸“ä¸ºå†…æµ‹æä¾›
 	void set_gy_pic()
 	{
 		loadimage(&pic, _T("cartoon_gy.png"));
@@ -112,12 +112,12 @@ private:
 	int kind;
 	//bool skill;
 	bool pause;
-	//ĞÅÓÃµã£¬¹Øºõ´û¿î¶î¶ÈÓë´û¿îÀûÂÊ£¬ÈëÓü¿Û£¬½»Ë°¼Ó
+	//ä¿¡ç”¨ç‚¹ï¼Œå…³ä¹è´·æ¬¾é¢åº¦ä¸è´·æ¬¾åˆ©ç‡ï¼Œå…¥ç‹±æ‰£ï¼Œäº¤ç¨åŠ 
 	int credit;
 	vector<int> property;
 };
 
-//ÓĞ¼¼ÄÜµÄÈË£¬Ã»ÓĞÈÎºÎÊ¹ÓÃ¼ÛÖµ£¬Ö»ÊÇÎªÁË´«µİÒ»Ğ©¼¼ÄÜÏà¹ØµÄº¯ÊıºÍ±äÁ¿
+//æœ‰æŠ€èƒ½çš„äººï¼Œæ²¡æœ‰ä»»ä½•ä½¿ç”¨ä»·å€¼ï¼Œåªæ˜¯ä¸ºäº†ä¼ é€’ä¸€äº›æŠ€èƒ½ç›¸å…³çš„å‡½æ•°å’Œå˜é‡
 class special_man :public person
 {
 public:
@@ -143,7 +143,7 @@ private:
 	bool skill;
 };
 
-//³ôÆ¨Ñò±¦
+//è‡­å±ç¾Šå®
 class fartman :public special_man
 {
 public:
@@ -155,7 +155,7 @@ public:
 	~fartman() {}
 	virtual bool go_steps(int i);
 private:
-	bool fart_push();  //¼¼ÄÜ£º³ôÆ¨ÍÆ½ø£¬Å×Íê÷»×Óºó¿ÉÒÔÑ¡ÔñÊÇ·ñ¶îÍâÏòÇ°Ò»¸ñ
+	bool fart_push();  //æŠ€èƒ½ï¼šè‡­å±æ¨è¿›ï¼ŒæŠ›å®Œéª°å­åå¯ä»¥é€‰æ‹©æ˜¯å¦é¢å¤–å‘å‰ä¸€æ ¼
 };
 
 class hacker :public special_man
@@ -169,8 +169,8 @@ public:
 	~hacker() {}
 	virtual int self_land_operations();
 private:
-	int attack_bank(); //¼¼ÄÜ£ººÚÈëÒøĞĞ£¬ÔÚ×Ô¼ºµÄµØ²úÉÏ¿É¶ÔÒøĞĞÕ¹¿ª¹¥»÷£¬³É¹¦¼ÓÇ®£¬Ê§°ÜÈëÓü
-	//·µ»ØÖµ 0£ºÎ´¹¥»÷£¬1£º¹¥»÷³É¹¦£¬2£º¹¥»÷Ê§°Ü
+	int attack_bank(); //æŠ€èƒ½ï¼šé»‘å…¥é“¶è¡Œï¼Œåœ¨è‡ªå·±çš„åœ°äº§ä¸Šå¯å¯¹é“¶è¡Œå±•å¼€æ”»å‡»ï¼ŒæˆåŠŸåŠ é’±ï¼Œå¤±è´¥å…¥ç‹±
+	//è¿”å›å€¼ 0ï¼šæœªæ”»å‡»ï¼Œ1ï¼šæ”»å‡»æˆåŠŸï¼Œ2ï¼šæ”»å‡»å¤±è´¥
 };
 
 class shirtman :public special_man
@@ -232,9 +232,9 @@ private:
 	IMAGE box;
 	vector<int> xs = { 50,190,320,460 };
 	vector<int> ys = { 0,230,460 };
-	vector<string> names = { "²¨¿Ë","·ÛÉ«ÌÇ¹û","Ğ¡³ó","ÅİÅİÌÇ",
-							"À¶É«ÏÄÈÕ","Ä¢¹½","¶À½ÇÊŞ","Ğ¡ÊÙĞÇ",
-							"ÌğÃÛÖ®ÃÎ","Ğ¡·ÛÑ¼","ÌğÌğÈ¦","Ë®Ä¸" };
+	vector<string> names = { "æ³¢å…‹","ç²‰è‰²ç³–æœ","å°ä¸‘","æ³¡æ³¡ç³–",
+							"è“è‰²å¤æ—¥","è˜‘è‡","ç‹¬è§’å…½","å°å¯¿æ˜Ÿ",
+							"ç”œèœœä¹‹æ¢¦","å°ç²‰é¸­","ç”œç”œåœˆ","æ°´æ¯" };
 	int take_blind_box();
 
 };

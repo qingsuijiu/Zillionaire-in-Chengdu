@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include<string>
 #include<vector>
 #include<random>
@@ -33,9 +33,9 @@ public:
 private:
 	int kind;
 	int id;
-	//»ú»áÃüÔËÊÂ¼şµÄÎÄ×Ö±íÊö
+	//æœºä¼šå‘½è¿äº‹ä»¶çš„æ–‡å­—è¡¨è¿°
 	static vector<vector<string>> contents;  
-	//»ú»áÃüÔËÊÂ¼ş´øÀ´µÄ½ğÇ®¸Ä¶¯
+	//æœºä¼šå‘½è¿äº‹ä»¶å¸¦æ¥çš„é‡‘é’±æ”¹åŠ¨
 	static vector<vector<int>> money_changes;
 
 };

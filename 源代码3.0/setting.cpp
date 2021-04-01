@@ -1,6 +1,6 @@
-#include "setting.h"
+ï»¿#include "setting.h"
 
-vector<string> setting::names = { "Æ¨±¦ÑòáÌ","ºÚ¿Ífy","Êº±¦·®ÈË¾«","ÃÈ±¦ÑóÓó","Ã¤ºĞÉÙÅ®" };
+vector<string> setting::names = { "å±å®ç¾Šå´½","é»‘å®¢fy","å±å®æ¨Šäººç²¾","èŒå®æ´‹èŠ‹","ç›²ç›’å°‘å¥³" };
 vector<int> setting::figure_xs = { 100,200,300,400,500 };
 int setting::figure_y = 450;
 int setting::arrow_x_change = 100;
@@ -24,7 +24,7 @@ setting::setting()
 
 void setting::setting_main()
 {
-	// »æÍ¼´°¿Ú³õÊ¼»¯
+	// ç»˜å›¾çª—å£åˆå§‹åŒ–
 	initgraph(718, 631);
 	refresh();
 
@@ -33,7 +33,7 @@ void setting::setting_main()
 	player_num_set();
 	figure_set();
 
-	setting_caption_round("°´ÈÎÒâ¼ü½øÈëÓÎÏ·½çÃæ");
+	setting_caption_round("æŒ‰ä»»æ„é”®è¿›å…¥æ¸¸æˆç•Œé¢");
 	_getch();
 	closegraph();
 }
@@ -53,9 +53,9 @@ void setting::refresh()
 void setting::round_set()
 {
 	refresh();
-	string temp = "×î´ó»ØºÏÊı£º";
+	string temp = "æœ€å¤§å›åˆæ•°ï¼š";
 	temp += to_string(largest_round);
-	temp += "\n°´¡û¼õÉÙ£¬°´¡úÔö¼Ó,»Ø³µ±íÊ¾È·¶¨";
+	temp += "\næŒ‰â†å‡å°‘ï¼ŒæŒ‰â†’å¢åŠ ,å›è½¦è¡¨ç¤ºç¡®å®š";
 	setting_caption_round(temp);
 
 	while (1)
@@ -68,9 +68,9 @@ void setting::round_set()
 			largest_round += 5;
 
 			refresh();
-			string temp = "×î´ó»ØºÏÊı£º";
+			string temp = "æœ€å¤§å›åˆæ•°ï¼š";
 			temp += to_string(largest_round);
-			temp += "\n°´¡û¼õÉÙ£¬°´¡úÔö¼Ó,»Ø³µ±íÊ¾È·¶¨";
+			temp += "\næŒ‰â†å‡å°‘ï¼ŒæŒ‰â†’å¢åŠ ,å›è½¦è¡¨ç¤ºç¡®å®š";
 			setting_caption_round(temp);
 		}
 		else if (c == 75)  //left key
@@ -79,19 +79,19 @@ void setting::round_set()
 				largest_round -= 5;
 
 			refresh();
-			string temp = "×î´ó»ØºÏÊı£º";
+			string temp = "æœ€å¤§å›åˆæ•°ï¼š";
 			temp += to_string(largest_round);
-			temp += "\n°´¡û¼õÉÙ£¬°´¡úÔö¼Ó,»Ø³µ±íÊ¾È·¶¨";
+			temp += "\næŒ‰â†å‡å°‘ï¼ŒæŒ‰â†’å¢åŠ ,å›è½¦è¡¨ç¤ºç¡®å®š";
 			setting_caption_round(temp);
 		}
-		else if (c == 13)  //»Ø³µ
+		else if (c == 13)  //å›è½¦
 		{
 
 			break;
 		}
-		else//Òì³£ÊäÈëµÄ´¦Àí
+		else//å¼‚å¸¸è¾“å…¥çš„å¤„ç†
 		{
-			//caption_write(1, "ÊäÈë´íÎó£¬ÇëÊäÈëy/n");
+			//caption_write(1, "è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥y/n");
 		}
 	}
 }
@@ -99,9 +99,9 @@ void setting::round_set()
 void setting::start_money_set()
 {
 	refresh();
-	string temp = "ÆğÊ¼×Ê½ğ£º";
+	string temp = "èµ·å§‹èµ„é‡‘ï¼š";
 	temp += to_string(start_money);
-	temp += "\n°´¡û¼õÉÙ£¬°´¡úÔö¼Ó,»Ø³µ±íÊ¾È·¶¨";
+	temp += "\næŒ‰â†å‡å°‘ï¼ŒæŒ‰â†’å¢åŠ ,å›è½¦è¡¨ç¤ºç¡®å®š";
 	setting_caption_round(temp);
 
 	while (1)
@@ -114,9 +114,9 @@ void setting::start_money_set()
 			start_money += 1000;
 
 			refresh();
-			string temp = "ÆğÊ¼×Ê½ğ£º";
+			string temp = "èµ·å§‹èµ„é‡‘ï¼š";
 			temp += to_string(start_money);
-			temp += "\n°´¡û¼õÉÙ£¬°´¡úÔö¼Ó,»Ø³µ±íÊ¾È·¶¨";
+			temp += "\næŒ‰â†å‡å°‘ï¼ŒæŒ‰â†’å¢åŠ ,å›è½¦è¡¨ç¤ºç¡®å®š";
 			setting_caption_round(temp);
 		}
 		else if (c == 75)  //left key
@@ -125,18 +125,18 @@ void setting::start_money_set()
 				start_money -= 1000;
 
 			refresh();
-			string temp = "ÆğÊ¼×Ê½ğ£º";
+			string temp = "èµ·å§‹èµ„é‡‘ï¼š";
 			temp += to_string(start_money);
-			temp += "\n°´¡û¼õÉÙ£¬°´¡úÔö¼Ó,»Ø³µ±íÊ¾È·¶¨";
+			temp += "\næŒ‰â†å‡å°‘ï¼ŒæŒ‰â†’å¢åŠ ,å›è½¦è¡¨ç¤ºç¡®å®š";
 			setting_caption_round(temp);
 		}
-		else if (c == 13)  //»Ø³µ
+		else if (c == 13)  //å›è½¦
 		{
 			break;
 		}
-		else//Òì³£ÊäÈëµÄ´¦Àí
+		else//å¼‚å¸¸è¾“å…¥çš„å¤„ç†
 		{
-			//caption_write(1, "ÊäÈë´íÎó£¬ÇëÊäÈëy/n");
+			//caption_write(1, "è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥y/n");
 		}
 	}
 }
@@ -145,9 +145,9 @@ void setting::start_money_set()
 void setting::player_num_set()
 {
 	refresh();
-	string temp = "Íæ¼ÒÊı£º";
+	string temp = "ç©å®¶æ•°ï¼š";
 	temp += to_string(player_num);
-	temp += "\n°´¡û¼õÉÙ£¬°´¡úÔö¼Ó,»Ø³µ±íÊ¾È·¶¨";
+	temp += "\næŒ‰â†å‡å°‘ï¼ŒæŒ‰â†’å¢åŠ ,å›è½¦è¡¨ç¤ºç¡®å®š";
 	setting_caption_round(temp);
 
 	while (1)
@@ -160,9 +160,9 @@ void setting::player_num_set()
 			player_num++;
 
 			refresh();
-			string temp = "Íæ¼ÒÊı£º";
+			string temp = "ç©å®¶æ•°ï¼š";
 			temp += to_string(player_num);
-			temp += "\n°´¡û¼õÉÙ£¬°´¡úÔö¼Ó,»Ø³µ±íÊ¾È·¶¨";
+			temp += "\næŒ‰â†å‡å°‘ï¼ŒæŒ‰â†’å¢åŠ ,å›è½¦è¡¨ç¤ºç¡®å®š";
 			setting_caption_round(temp);
 		}
 		else if (c == 75)  //left key
@@ -171,28 +171,28 @@ void setting::player_num_set()
 				player_num--;
 
 			refresh();
-			string temp = "Íæ¼ÒÊı£º";
+			string temp = "ç©å®¶æ•°ï¼š";
 			temp += to_string(player_num);
-			temp += "\n°´¡û¼õÉÙ£¬°´¡úÔö¼Ó,»Ø³µ±íÊ¾È·¶¨";
+			temp += "\næŒ‰â†å‡å°‘ï¼ŒæŒ‰â†’å¢åŠ ,å›è½¦è¡¨ç¤ºç¡®å®š";
 			setting_caption_round(temp);
 		}
-		else if (c == 13)  //»Ø³µ
+		else if (c == 13)  //å›è½¦
 		{
 			break;
 		}
-		else//Òì³£ÊäÈëµÄ´¦Àí
+		else//å¼‚å¸¸è¾“å…¥çš„å¤„ç†
 		{
-			//caption_write(1, "ÊäÈë´íÎó£¬ÇëÊäÈëy/n");
+			//caption_write(1, "è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥y/n");
 		}
 	}
 }
 
 void setting::figure_set_inf(int i)
 {
-	string temp = "ÏÖÔÚÓÉÍæ¼Ò";
+	string temp = "ç°åœ¨ç”±ç©å®¶";
 	temp += to_string(i);
-	temp += "Ñ¡ÔñÈËÎï½ÇÉ«";
-	temp += "\n°´¡û×óÒÆ£¬°´¡úÓÒÒÆ,»Ø³µ±íÊ¾È·¶¨";
+	temp += "é€‰æ‹©äººç‰©è§’è‰²";
+	temp += "\næŒ‰â†å·¦ç§»ï¼ŒæŒ‰â†’å³ç§»,å›è½¦è¡¨ç¤ºç¡®å®š";
 	setting_caption_round(temp);
 }
 
@@ -202,13 +202,13 @@ void setting::figure_set()
 	{
 		refresh();
 
-		//ÏÔÊ¾³õÊ¼¼ıÍ·
+		//æ˜¾ç¤ºåˆå§‹ç®­å¤´
 		arrow_x = figure_xs[0];
 		const int arrow_y = 370;
 		const int arrow_x_offset = 20;
 		putimage(arrow_x + arrow_x_offset, arrow_y, &arrow);
 
-		//ÌáÊ¾ÈËÎïÑ¡Ôñ·½Ê½
+		//æç¤ºäººç‰©é€‰æ‹©æ–¹å¼
 		figure_set_inf(i + 1);
 	
 		while (1)
@@ -232,15 +232,15 @@ void setting::figure_set()
 				putimage(arrow_x + arrow_x_offset, arrow_y, &arrow);
 				figure_set_inf(i + 1);
 			}
-			else if (c == 13)  //»Ø³µ
+			else if (c == 13)  //å›è½¦
 			{
 				kind.push_back((arrow_x - figure_xs[0]) / arrow_x_change + 1);
 				refresh();
 				break;
 			}
-			else//Òì³£ÊäÈëµÄ´¦Àí
+			else//å¼‚å¸¸è¾“å…¥çš„å¤„ç†
 			{
-				//caption_write(1, "ÊäÈë´íÎó£¬ÇëÊäÈëy/n");
+				//caption_write(1, "è¾“å…¥é”™è¯¯ï¼Œè¯·è¾“å…¥y/n");
 			}
 		}
 

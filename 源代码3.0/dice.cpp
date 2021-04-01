@@ -1,4 +1,4 @@
-#include "dice.h"
+﻿#include "dice.h"
 
 dice::dice()
 {

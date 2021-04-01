@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include"dfwmap.h"
 #include"site.h"
 #include"person.h"
@@ -8,7 +8,7 @@
 
 #include <vector>
 #include <memory>
-#include <graphics.h>		// ÒıÓÃÍ¼ĞÎ¿âÍ·ÎÄ¼ş
+#include <graphics.h>		// å¼•ç”¨å›¾å½¢åº“å¤´æ–‡ä»¶
 #include <conio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -31,14 +31,14 @@ private:
 	vector<shared_ptr<person>> players;
 	dfwmap m;
 	dice d;
-	size_t largest_round;  //×î´ó»ØºÏÊı
-	size_t player_num;  //Íæ¼ÒÊıÁ¿
-	size_t robot_num;  //»úÆ÷ÈËÊıÁ¿
-	size_t start_money;  //ÆğÊ¼×Ê½ğ
+	size_t largest_round;  //æœ€å¤§å›åˆæ•°
+	size_t player_num;  //ç©å®¶æ•°é‡
+	size_t robot_num;  //æœºå™¨äººæ•°é‡
+	size_t start_money;  //èµ·å§‹èµ„é‡‘
 
 	IMAGE img;
-	IMAGE background;  //±³¾°Í¼
-	IMAGE dialog;  //¶Ô»°¿ò
+	IMAGE background;  //èƒŒæ™¯å›¾
+	IMAGE dialog;  //å¯¹è¯æ¡†
 
 	static vector<string> building_names; 
 	static vector<double> building_prices;
@@ -56,7 +56,7 @@ private:
 	void go_to_prison(int player_id);
 	void step_on_shirt(int player_id, shared_ptr<site> s);
 	void judge_bankruptcy(int player_id);
-	void take_loans(int player_id);  //ÉĞÎ´ÊµÏÖ£¬¼Æ»®Í¨¹ıÔÙĞ´Ò»¸öÀàÁí¿ª´°ÌåÊµÏÖ
+	void take_loans(int player_id);  //å°šæœªå®ç°ï¼Œè®¡åˆ’é€šè¿‡å†å†™ä¸€ä¸ªç±»å¦å¼€çª—ä½“å®ç°
 	
 	void touch_tax(int player_id, string tax_name);
 	void touch_cha_des(string cap, int player_id, int des_kind);
