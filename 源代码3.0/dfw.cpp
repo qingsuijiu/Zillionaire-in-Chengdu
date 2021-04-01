@@ -290,7 +290,7 @@ void dfw::operatate_estate(shared_ptr<site> current_site,int j)
 	}
 	case -3: //命运
 	{
-		touch_cha_des("按空格，获得神秘命运", j, 0);
+		touch_cha_des("按空格，获得神秘命运", j, 1);
 		break;
 	}
 	case -4:  //路过
@@ -356,7 +356,7 @@ void dfw::touch_cha_des(string cap,int player_id,int des_kind)
 		_getch();
 	refresh_background();
 	caption_write(2, cap);
-	destiny cha;
+	destiny cha(des_kind);
 	while (1)
 	{
 		if (_kbhit())

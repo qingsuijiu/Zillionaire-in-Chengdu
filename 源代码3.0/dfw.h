@@ -56,7 +56,7 @@ private:
 	void go_to_prison(int player_id);
 	void step_on_shirt(int player_id, shared_ptr<site> s);
 	void judge_bankruptcy(int player_id);
-	void take_loans(int player_id);
+	void take_loans(int player_id);  //尚未实现，计划通过再写一个类另开窗体实现
 	
 	void touch_tax(int player_id, string tax_name);
 	void touch_cha_des(string cap, int player_id, int des_kind);

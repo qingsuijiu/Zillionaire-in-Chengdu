@@ -126,5 +126,17 @@
     <Image Include="setting_background.png">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="..\素材文件\POPMART.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\素材文件\ppmt_box.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\素材文件\ppmt_choice_interface.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\素材文件\blindboxgirl.png">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

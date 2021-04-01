@@ -164,6 +164,10 @@
     <Media Include="background_music_2.mp3" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\素材文件\blindboxgirl.png" />
+    <Image Include="..\素材文件\POPMART.png" />
+    <Image Include="..\素材文件\ppmt_box.jpg" />
+    <Image Include="..\素材文件\ppmt_choice_interface.png" />
     <Image Include="arrow.png" />
     <Image Include="blank.png" />
     <Image Include="cartoon_frj.png" />
