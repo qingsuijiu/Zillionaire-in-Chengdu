@@ -112,9 +112,8 @@ void dfw::dfw_main()
 				if (players[j]->get_kind() == 5)
 				{
 					initgraph(1420, 813);   //1200,850+200
-					refresh_background();
 				}
-				
+				refresh_background();
 				//如果person类的reach_starting方法返回非空的string，需将其输出
 				if (!temp2.empty())
 				{

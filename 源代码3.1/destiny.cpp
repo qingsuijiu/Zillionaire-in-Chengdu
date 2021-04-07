@@ -41,7 +41,7 @@ destiny::destiny(int m_kind)
 	
 	//获得随机id
 	static default_random_engine e(time(0));
-	static uniform_int_distribution<int> u(0,contents.size()-1);
+	static uniform_int_distribution<int> u(0,contents[kind].size()-1);
 	id = u(e);
 }
 
