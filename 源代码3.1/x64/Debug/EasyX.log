@@ -1,0 +1,44 @@
+﻿  dfw.cpp
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\person.h(22,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(79,37): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(128,73): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(189,63): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(189,64): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(195,10): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(204,68): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(206,72): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(244,64): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(245,37): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(247,61): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(275,64): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(276,37): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(280,63): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(507,12): warning C4244: “初始化”: 从“_Ty”转换到“int”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(567,68): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(612,39): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(620,18): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(692,18): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\dfw.cpp(754,21): warning C4244: “初始化”: 从“_Ty”转换到“int”，可能丢失数据
+          with
+          [
+              _Ty=double
+          ]
+  dfwmap.cpp
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\person.h(22,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  person.cpp
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\person.h(22,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\person.cpp(89,39): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\person.cpp(110,39): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\person.cpp(132,39): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\person.cpp(298,37): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\person.cpp(319,15): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  site.cpp
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\person.h(22,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  源.cpp
+C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\person.h(22,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  正在生成代码...
+  EasyX.vcxproj -> C:\Users\64278\Documents\GitHub\Zillionaire-in-Chengdu\源代码3.1\x64\Debug\For my Best Girl.exe
